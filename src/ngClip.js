@@ -1,8 +1,10 @@
 /*jslint node: true */
-/*global ZeroClipboard */
 
-(function(window, angular, undefined) {
+define(function (require) {
   'use strict';
+
+  var ZeroClipboard = require('ZeroClipboard');
+  var angular = require('angular');
 
   angular.module('ngClipboard', []).
     provider('ngClip', function() {
@@ -81,4 +83,4 @@
         }
       };
     }]);
-})(window, window.angular);
+});
